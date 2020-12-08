@@ -1,0 +1,65 @@
+<!--<link href="../theme/stylesheet.css" rel="stylesheet" type="text/css">-->
+{$video_fee = $Cbucket->configs['video_fee']}
+{$banner_header= $Cbucket->configs['banner_header']}
+{$banner_text = $Cbucket->configs['banner_text']}
+<div class="heading">
+    <h2>{lang code="manage_banner"}</h2>
+</div>
+
+<!--<a class="btn btn-primary btn-sm pull-right" href="?mode=add">Add New Level <b>+</b></a>-->
+<br>
+
+<form action="#" id="form_banner" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="banner_image"><b>{lang code="banner_image"}:</b></label> <br>
+            <input type="file" name="banner_image" id="banner_image">
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="banner_header"><b>{lang code="banner_header"}:</b></label><br>
+        <textarea name="banner_header" id="banner_header" cols="50" rows="1" placeholder="{$banner_header}"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="banner_text"><b>{lang code="banner_text"}:</b></label><br>
+        <textarea name="banner_text" id="banner_text" cols="50" rows="5">
+            {$banner_text}
+        </textarea>
+    </div>
+    <br>
+    <button class="btn btn-success" type="button" id="btn_submit">Update Settings</button>
+</form>
+
+<script>
+    var baseurl = '{$baseurl}';
+
+    $(document).ready(function () {
+        $('#btn_submit').click(function () {
+            var file_data = $('#banner_image').prop('files')[0];
+            var banner_header = $('#banner_header').val();
+            var banner_text = $('#banner_text').val();
+            var form_data = new FormData();
+            form_data.append('banner_image', file_data);
+            form_data.append('banner_header', banner_header);
+            form_data.append('banner_text', banner_text);
+
+            $.ajax({
+                url: baseurl + '/admin_area/manage_banner.php',
+                type: 'post',
+                data: form_data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (msg) {
+                    if (msg) {
+                        alert('Successfully updated.');
+                        window.location.reload();
+                    }
+                }
+            })
+        })
+    });
+
+</script>
