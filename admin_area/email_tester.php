@@ -78,7 +78,7 @@ if( isset( $_POST[ 'start_test' ] ) ) {
 				$subject = $cbemail->replace( $template[ 'email_template_subject' ], $variables );
 				$body = $cbemail->replace( $template[ 'email_template' ], $variables );
 			}
-		}
+		}xrX151y?
 
 		$mail = array(
 			'to' => $to_email,

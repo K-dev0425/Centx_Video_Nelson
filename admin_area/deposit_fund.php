@@ -9,7 +9,7 @@ $pages->page_redir();
 
 /* Assigning page and subpage */
 if(!defined('MAIN_PAGE')){
-    define('MAIN_PAGE', 'payment_deposit');
+    define('MAIN_PAGE', 'transaction_history');
 }
 if(!defined('SUB_PAGE')){
     define('SUB_PAGE', 'deposit_fund');

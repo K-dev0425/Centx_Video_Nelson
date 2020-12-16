@@ -1,0 +1,32 @@
+{$user = $userquery->get_user_details(userid())}
+
+<div class="container" id="main">
+    <div class="status text-center" style="background-color: #fff;color: #000!important;">
+        {if !empty($txn_id)}
+        <h1 class="success">Your payment has been successful.</h1>
+
+        <h4>Payment Information</h4>
+        <!--<p><b>Reference Number:</b> {$payment_id}</p>-->
+        <p><b>Transaction ID:</b> {$txn_id}</p>
+        <p><b>Paid Amount:</b> ${$payment_gross}USD</p>
+        <p><b>Payment Status:</b> {$payment_status}</p>
+        {else}
+        <h1 class="error">Your payment has failed.</h1>
+        {/if}
+
+        <a href="/" class="btn-link">Back to main page</a>
+
+    </div>
+
+</div>
+
+<style>
+    .status {
+        padding: 30px 20px;
+        margin: auto;
+        max-width: 550px;
+    }
+    #main {
+        margin-top: 50px;
+    }
+</style>

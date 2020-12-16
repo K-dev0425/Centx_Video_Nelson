@@ -6,17 +6,18 @@ require'../includes/admin_config.php';
 $userquery->admin_login_check();
 $pages->page_redir();
 
+
 /* Assigning page and subpage */
 if(!defined('MAIN_PAGE')){
-    define('MAIN_PAGE', 'transaction_history');
+    define('MAIN_PAGE', 'payment');
 }
 if(!defined('SUB_PAGE')){
-    define('SUB_PAGE', 'video_payment');
+    define('SUB_PAGE', 'paypal');
 }
 
 $userquery->login_check('admin_access');
 
-$query = "SELECT * FROM ".tbl("transfer")." WHERE transfer_type='paid'";
+$query = "SELECT * FROM ".tbl("paypal_payment")." WHERE id > 0";
 
 $username = '';
 $date = '';
@@ -33,38 +34,38 @@ if (isset($_GET['date']) && $_GET['date'] != 'all') {
     switch ($date)
     {
         case 'today': {
-            $query .= " AND DATE(date_) = DATE(NOW())";
+            $query .= " AND DATE(start_time) = DATE(NOW())";
         }
-        break;
+            break;
 
         case 'yesterday':{
-            $query .= " AND DATE(date_) = DATE(NOW()) - INTERVAL 1 DAY";
+            $query .= " AND DATE(start_time) = DATE(NOW()) - INTERVAL 1 DAY";
         }
-        break;
+            break;
 
         case 'this_week': {
-            $query .= " AND DATE(date_) > DATE(NOW()) - INTERVAL 7 DAY";
+            $query .= " AND DATE(start_time) > DATE(NOW()) - INTERVAL 7 DAY";
         }
-        break;
+            break;
 
         case 'this_month': {
-            $query .= " AND DATE(date_) > DATE(NOW()) - INTERVAL 32 DAY AND MONTH(date_) = MONTH(NOW())";
+            $query .= " AND DATE(start_time) > DATE(NOW()) - INTERVAL 32 DAY AND MONTH(start_time) = MONTH(NOW())";
         }
-        break;
+            break;
 
         case 'this_year': {
-            $query .= " AND YEAR(date_) = YEAR(NOW())";
+            $query .= " AND YEAR(start_time) = YEAR(NOW())";
         }
-        break;
+            break;
     }
 }
 
 $query .= " ORDER BY id DESC";
 
 $query1 = $query;
-$all_video_conds = db_select($query1);
+$all_deposit_conds = db_select($query1);
 
-$count = count($all_video_conds);
+$count = count($all_deposit_conds);
 $last_page = ceil($count/$list_per_page);
 
 if (isset($_GET['page']) && (int)$_GET['page'] != 1) {
@@ -76,15 +77,15 @@ else {
     $query .= " LIMIT ". $list_per_page;
 }
 
-$video_payments = db_select($query);
+$paypal_transfers = db_select($query);
 
-Assign('video_payments', $video_payments);
+Assign('deposit_fund', $paypal_transfers);
 Assign('userInput', $username);
 Assign('dateInput', $date);
 Assign('page', $page);
 Assign('last_page', $last_page);
 
-subtitle("Video Payment");
-template_files('video_payment.html');
+subtitle("Paypal Transfer");
+template_files('paypal_transfer.html');
 display_it();
 ?>

@@ -1,21 +1,47 @@
 {$user = $userquery->get_user_details(userid())}
+{$deposit_max_price = $Cbucket->configs['deposit_max_price']}
+{$deposit_min_price = $Cbucket->configs['deposit_min_price']}
+{$deposit_text = $Cbucket->configs['deposit_text']}
 
 <div id="main">
-    <div class="cb-box container" style="max-width: 450px">
-        <div id="deposit_box">
-            <div id="deposit_amount_box" class="row">
-                <div class="col-md-6">
-                    <label for="input_deposit_amount">Deposit Amount($USD)</label>
-                </div>
-                <div class="col-md-6">
-                    <input type="number" id="input_deposit_amount" placeholder="30" value="30" name="deposit_amount" onchange="change_amount();">
-                </div>
+
+    <form action="{$paypal_url}" method="post">
+        <div class="alert alert-success alert-dismissable">
+            <h3 id="deposit_text">{$deposit_text}</h3>
+            <span id="deposit_range">You can deposit from ${$deposit_min_price} up to ${$deposit_max_price}USD at once.</span>
+        </div>
+
+        <!-- Identify your business so that you can collect the payments. -->
+        <input type="hidden" name="business" value="{$paypal_id}">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="item_name" value="deposit">
+        <input type="hidden" name="item_number" value="1">
+        <input type="hidden" name="amount" value="30" placeholder="30">
+        <input type="hidden" name="return" value="{$paypal_return_url}">
+        <input type="hidden" name="cancel_return" value="{$paypal_cancel_url}">
+
+        <div class="cb-box container" style="max-width: 450px">
+
+            <div id="current_balance_box">
+                Your current balance is <span id="current_amount_span">${$user.balance}</span>.
             </div>
-            <div id="deposit_fund">
-                <button class="btn btn-lg btn-primary" id="btn_deposit_fund">Confirm and pay </button>
+
+            <div id="deposit_box">
+                <div id="deposit_amount_box" class="row">
+                    <div class="col-md-6">
+                        <label for="input_deposit_amount">Deposit Amount($USD)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" id="input_deposit_amount" placeholder="30" value="30" name="deposit_amount" onchange="change_amount();">
+                    </div>
+                </div>
+                <div id="deposit_fund">
+                    <button class="btn btn-lg btn-primary" id="btn_deposit_fund">Confirm and pay </button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
+
 </div>
 
 <style>
@@ -29,6 +55,26 @@
     #deposit_amount_box .col-md-6, #deposit_fund {
         text-align: center;
     }
+    #main .alert-success {
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 35px;
+        text-align: center;
+        padding-top: 0px;
+        border-radius: 10px;
+    }
+    #deposit_amount_box label {
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    #current_balance_box {
+        font-size: 15px;
+        text-align: center;
+    }
+    #current_amount_span {
+        font-size: 20px;
+        font-weight: 600;
+    }
 </style>
 
 <script>
@@ -39,27 +85,28 @@
 
     function change_amount() {
         var deposit_amount = $('#input_deposit_amount').val();
-        $('#deposit_amount').text(deposit_amount);
+        // $('#deposit_amount').text(deposit_amount);
+        $('input[name="amount"]').val(deposit_amount);
     }
 
-    $('#btn_deposit_fund').click(function () {
-        var amount = $('#input_deposit_amount').val();
-        var balance = '{$user.balance}';
-        var baseurl = '{$baseurl}';
-        var updated_balance = parseFloat(balance) + parseFloat(amount);
-        updated_balance = updated_balance.toFixed(2);
-        $.ajax({
-            url: baseurl + '/actions/update_deposit.php',
-            type: 'post',
-            data: {
-                amount: amount,
-                updated_balance: updated_balance
-            },
-            success: function (msg) {
-                if (msg !== 'false')
-                    alert('$' + amount + 'USD was added to your deposit.');
-                    window.location.reload();
-            }
-        })
-    })
+    // $('#btn_deposit_fund').click(function () {
+    //     var amount = $('#input_deposit_amount').val();
+    //     var balance = '{$user.balance}';
+    //     var baseurl = '{$baseurl}';
+    //     var updated_balance = parseFloat(balance) + parseFloat(amount);
+    //     updated_balance = updated_balance.toFixed(2);
+    //     $.ajax({
+    //         url: baseurl + '/actions/update_deposit.php',
+    //         type: 'post',
+    //         data: {
+    //             amount: amount,
+    //             updated_balance: updated_balance
+    //         },
+    //         success: function (msg) {
+    //             if (msg !== 'false')
+    //                 alert('$' + amount + 'USD was added to your deposit.');
+    //                 window.location.reload();
+    //         }
+    //     })
+    // })
 </script>

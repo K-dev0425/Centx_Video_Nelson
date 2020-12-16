@@ -398,7 +398,16 @@
 	
 	# Number of activity feeds to display on channel page
 	define("USER_ACTIVITY_FEEDS_LIMIT",15);
-	
+
+	# RK Paypal Payment Terms
+	define('PAYPAL_ID', 'sb-awull4048758@business.example.com');
+	define('PAYPAL_SANDBOX', true);
+	define('PAYPAL_RETURN_URL', BASEURL.'/paypal_success.php');
+	define('PAYPAL_CANCEL_URL', BASEURL.'/paypal_cancel.php');
+	define('PAYPAL_NOTIFY_URL', BASEURL.'/paypal_ipn.php');
+	define('PAYPAL_CURRENCY', 'USD');
+	define('PAYPAL_URL', (PAYPAL_SANDBOX == true) ? "https://www.sandbox.paypal.com/cgi-bin/webscr" : "https://www.paypal.com/cgi-bin/webscr");
+
 	# SETTING PHOTO SETTING
 	$cbphoto->thumb_width = $row['photo_thumb_width'];
 	$cbphoto->thumb_height = $row['photo_thumb_height'];

@@ -556,13 +556,14 @@
 
 <script>
 
+	var videos = '{lang code="menu_videos"}';
 	$(document).ready(function () {
 	    var menu_2th = $('#left-menu .menu-container ul li:eq(1)');
-	    if ($(menu_2th).find('a').text() == 'Videos') $('#left-menu .menu-container ul li:eq(1)').remove();
+	    if ($(menu_2th).find('a').text() == videos) $('#left-menu .menu-container ul li:eq(1)').remove();
     });
 
     var menu_2th = $('#left-menu .menu-container ul li:eq(1)');
-    if ($(menu_2th).find('a').text() == 'Videos') $('#left-menu .menu-container ul li:eq(1)').remove();
+    if ($(menu_2th).find('a').text() == videos) $('#left-menu .menu-container ul li:eq(1)').remove();
 
     function add_dark(elem) {
         if ($(elem).prop('checked'))

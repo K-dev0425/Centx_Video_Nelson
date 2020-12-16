@@ -68,7 +68,7 @@
                 {/if}
 
                 {foreach from=$oneMenuItem key=name item=oneSubMenuItem}
-                
+
                 {if $smarty.const.SUB_PAGE == $name}
 
                 <li class="active">
@@ -123,17 +123,17 @@
             {/foreach}
 
             <!--//updated by Ricky-->
-            {if $smarty.const.MAIN_PAGE == 'payment_deposit'}
+            {if $smarty.const.MAIN_PAGE == 'transaction_history'}
             <li class="active open">
                 {else}
             <li>
-                {/if}
+            {/if}
                 <a href="#" class="dropdown-toggle">
-                    <i class="glyphicon glyphicon-usd"></i>
-                    <span class="menu-text"> Payment </span>
+                    <i class="glyphicon glyphicon-time"></i>
+                    <span class="menu-text"> Transaction History </span>
                     <b class="arrow icon-angle-down"></b>
                 </a>
-                {if $smarty.const.MAIN_PAGE == 'payment_deposit'}
+                {if $smarty.const.MAIN_PAGE == 'transaction_history'}
                 <ul class="submenu" style="display:block">
                 {else}
                 <ul class="submenu">
@@ -168,12 +168,75 @@
                         {/if}
                         <a href="deposit_fund.php">
                             <i class="glyphicon glyphicon-hand-right"></i>
-                            Deposit Fund
+                            Deposit History
                         </a>
                     </li>
 
                 </ul>
             </li>
+
+                    {if $smarty.const.MAIN_PAGE == 'payment'}
+                    <li class="active open">
+                        {else}
+                    <li>
+                        {/if}
+                        <a href="#" class="dropdown-toggle">
+                            <i class="glyphicon glyphicon-usd"></i>
+                            <span class="menu-text"> {lang code="payment"} </span>
+                            <b class="arrow icon-angle-down"></b>
+                        </a>
+                        {if $smarty.const.MAIN_PAGE == 'payment'}
+                        <ul class="submenu" style="display:block">
+                            {else}
+                            <ul class="submenu">
+                                {/if}
+
+                                {if $smarty.const.SUB_PAGE == 'deposit'}
+                                <li class="active">
+                                    {else}
+                                <li>
+                                    {/if}
+                                    <a href="deposit.php">
+                                        <i class="glyphicon glyphicon-hand-right"></i>
+                                        {lang code="deposit"}
+                                    </a>
+                                </li>
+
+                                {if $smarty.const.SUB_PAGE == 'paypal'}
+                                <li class="active">
+                                    {else}
+                                <li>
+                                    {/if}
+                                    <a href="paypal_transfer.php">
+                                        <i class="glyphicon glyphicon-hand-right"></i>
+                                        {lang code="paypal_transfer"}
+                                    </a>
+                                </li>
+
+                                <!--{if $smarty.const.SUB_PAGE == 'ad_payment'}-->
+                                <!--<li class="active">-->
+                                    <!--{else}-->
+                                <!--<li>-->
+                                    <!--{/if}-->
+                                    <!--<a href="ad_payment.php">-->
+                                        <!--<i class="glyphicon glyphicon-hand-right"></i>-->
+                                        <!--Ad Payment-->
+                                    <!--</a>-->
+                                <!--</li>-->
+
+                                <!--{if $smarty.const.SUB_PAGE == 'deposit_fund'}-->
+                                <!--<li class="active">-->
+                                    <!--{else}-->
+                                <!--<li>-->
+                                    <!--{/if}-->
+                                    <!--<a href="deposit_fund.php">-->
+                                        <!--<i class="glyphicon glyphicon-hand-right"></i>-->
+                                        <!--Deposit History-->
+                                    <!--</a>-->
+                                <!--</li>-->
+
+                            </ul>
+                            </li>
             <!--//End-->
         </ul>
     </li>

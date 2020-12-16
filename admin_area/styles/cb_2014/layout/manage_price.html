@@ -1,5 +1,6 @@
 <!--<link href="../theme/stylesheet.css" rel="stylesheet" type="text/css">-->
 {$video_fee = $Cbucket->configs['video_fee']}
+{$ad_fee = $Cbucket->configs['ad_fee']}
 {$video_max_price = $Cbucket->configs['video_max_price']}
 {$audio_max_price = $Cbucket->configs['audio_max_price']}
 <div class="heading">
@@ -12,15 +13,19 @@
 <form action="#" id="form_price" method="post">
     <div class="row">
         <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <label for="video_fee"><b>Fee(%):</b></label> <br>
+            <label for="video_fee"><b>{lang code="video_fee"}(%):</b></label> <br>
             <input type="number" name="video_fee" id="video_fee" value="{(int)$video_fee}">
         </div>
         <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <label for="video_max_price"><b>Video Max Price($USD):</b></label> <br>
+            <label for="ad_fee"><b>{lang code="ad_fee"}(%):</b></label> <br>
+            <input type="number" name="ad_fee" id="ad_fee" value="{(int)$ad_fee}">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="video_max_price"><b>{lang code="video_max_price"}($USD):</b></label> <br>
             <input type="number" name="video_max_price" id="video_max_price" value="{(int)$video_max_price}">
         </div>
         <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
-            <label for="audio_max_price"><b>Audio Max Price($USD):</b></label> <br>
+            <label for="audio_max_price"><b>{lang code="audio_max_price"}($USD):</b></label> <br>
             <input type="number" name="audio_max_price" id="audio_max_price" value="{(int)$audio_max_price}">
         </div>
     </div>

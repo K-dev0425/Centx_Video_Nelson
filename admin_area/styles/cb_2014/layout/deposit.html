@@ -1,0 +1,54 @@
+<!--<link href="../theme/stylesheet.css" rel="stylesheet" type="text/css">-->
+{$deposit_max_price = $Cbucket->configs['deposit_max_price']}
+{$deposit_min_price = $Cbucket->configs['deposit_min_price']}
+{$deposit_text = $Cbucket->configs['deposit_text']}
+<div class="heading">
+    <h2>Manage Deposit</h2>
+</div>
+
+<!--<a class="btn btn-primary btn-sm pull-right" href="?mode=add">Add New Level <b>+</b></a>-->
+<br>
+
+<form action="#" id="form_deposit" method="post">
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="deposit_min_price"><b>{lang code="deposit_min_limit"}($USD):</b></label> <br>
+            <input type="number" name="deposit_min_price" id="deposit_min_price" value="{(int)$deposit_min_price}">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="deposit_max_price"><b>{lang code="deposit_max_limit"}($USD):</b></label> <br>
+            <input type="number" name="deposit_max_price" id="deposit_max_price" value="{(int)$deposit_max_price}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6">
+            <label for="deposit_text"><strong>{lang code="deposit_text"}</strong></label> <br>
+            <textarea name="deposit_text" id="deposit_text" rows="5" style="width: 100%">{$deposit_text}</textarea>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-success" type="button" id="btn_submit">Update Settings</button>
+</form>
+
+<script>
+    var baseurl = '{$baseurl}';
+
+    $(document).ready(function () {
+        $('#btn_submit').click(function () {
+            var form_data = $('#form_deposit').serialize();
+
+            $.ajax({
+                url: baseurl + '/admin_area/deposit.php',
+                type: 'post',
+                data: form_data,
+                success: function (msg) {
+                    if (msg) {
+                        alert('Successfully updated.');
+                        window.location.reload();
+                    }
+                }
+            })
+        })
+    });
+
+</script>

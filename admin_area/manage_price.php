@@ -20,11 +20,15 @@ $userquery->login_check('admin_access');
 if (isset($_POST['video_fee'])) {
 
     $video_fee = $_POST['video_fee'];
+    $ad_fee = $_POST['ad_fee'];
     $video_max_price = $_POST['video_max_price'];
     $audio_max_price = $_POST['audio_max_price'];
 
     $query = "UPDATE " . tbl("config") . " SET value = '".$video_fee."'  WHERE name = 'video_fee'";
     $db->Execute($query);
+
+    $query_ad = "UPDATE " . tbl("config") . " SET value = '".$ad_fee."'  WHERE name = 'ad_fee'";
+    $db->Execute($query_ad);
 
     $query1 = "UPDATE " . tbl("config") . " SET value = '".$video_max_price."'  WHERE name = 'video_max_price'";
     $db->Execute($query1);
