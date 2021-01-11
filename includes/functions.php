@@ -6056,4 +6056,18 @@
     include( 'functions_photo.php' );
     include('functions_actions.php');
     include('functions_playlist.php');
+
+
+    //R.K Added
+	function total_revenue($vid) {
+		$query = "SELECT amount FROM " . tbl("transfer") . " WHERE videoid = " . $vid;
+		$result = db_select($query);
+		$total_revenue = 0;
+		foreach ($result as $item) {
+			$total_revenue += (float)$item['amount'];
+		}
+		return number_format($total_revenue, 2);
+	}
+
+
 ?>

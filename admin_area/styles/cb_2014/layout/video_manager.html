@@ -49,6 +49,11 @@
                                 $video.duration>1}{$video.duration|SetTime}{else}00:00{/if})<br>
                          <span class="labels1"> <strong>{$video.date_added|niceTime}</strong> | 
                             {lang code='views'} : <strong>{$video.views|number_format}</strong></span>
+
+                                <div class="total_revenue">
+                                    <span><strong>{lang code='total_revenue'}</strong> | $<strong>{total_revenue($video.videoid)}</strong>USD</span>
+                                </div>
+
                                 <div class="labels mtl">
                                    
                                     <span class="label {if $video.active=='yes'}label-success{else}label-danger{/if}">
