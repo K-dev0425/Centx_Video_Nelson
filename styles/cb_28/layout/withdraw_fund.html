@@ -1,0 +1,240 @@
+{$user = $userquery->get_user_details(userid())}
+{$withdraw_max_price = $Cbucket->configs['withdraw_max_price']}
+{$withdraw_min_price = $Cbucket->configs['withdraw_min_price']}
+{$withdraw_text = $Cbucket->configs['withdraw_text']}
+
+<div id="main">
+
+    {if $flags == 1}
+    <div class="alert alert-success alert-dismissable">
+        <h3 id="flag_text">You can't withdraw due to the flagged videos.</h3>
+    </div>
+    {else}
+
+    <form action="{$base_url}/actions/paypal_implicit_pay.php" method="post" id="form_withdraw_request">
+        <div class="alert alert-success alert-dismissable">
+            <h3 id="withdraw_text">{$withdraw_text}</h3>
+            <span id="withdraw_range">You can withdraw from ${$withdraw_min_price} up to ${$withdraw_max_price}USD at once.</span>
+        </div>
+
+        <div class="cb-box container" style="max-width: 450px;display: none;" id="withdraw_box">
+
+            <div id="current_balance_box">
+                Your current balance is <span id="current_amount_span">${$user.balance}</span>.
+            </div>
+
+            <div id="withdraw_input_box">
+                <div id="withdraw_amount_box" class="row">
+                    <div class="col-md-6">
+                        <label for="input_withdraw_amount">Withdrawal Amount($USD)</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" id="input_withdraw_amount" placeholder="30" value="30" name="withdraw_amount">
+                    </div>
+                </div>
+                <div id="input_paypal_email_box" class="row">
+                    <div class="col-md-6">
+                        <label for="input_paypal_email">Your Paypal Address</label>
+                    </div>
+                    <div class="col-md-6">
+                        {if $user.paypal_email != '' && $user.paypal_email != NULL}
+                        <input type="email" id="input_paypal_email" name="paypal_email_address" value="{$user.paypal_email}" disabled>
+                        {else}
+                        <input type="email" id="input_paypal_email" name="paypal_email_address">
+                        {/if}
+                    </div>
+                </div>
+                <div id="withdraw_fund">
+                    <button class="btn btn-lg btn-primary" type="button" id="btn_withdraw_fund" onclick="payout_withdraw()">Send Request</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="{$base_url}/actions/twilio_send_code.php" method="post" id="form_twilio_send_code">
+        <div class="cb-box container" style="max-width: 450px" id="verify_send_box">
+            {if $user.phone_number == NULL}
+                <div id="phone_verify_text">
+                    <h4>Set Up Security Phone Number</h4>
+                    <p>Please provide your phone number so we can send you the verification code to verify your account.
+                    This number will be kept private and will only be used for verification purposes.</p>
+                </div>
+            {/if}
+            <div>
+                <div id="phone_input_box" class="row text-center" style="margin: 15px -15px;">
+                    <div class="col-md-6">
+                        <label for="input_phone_number"><b>Phone Number: </b></label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        {if $user.phone_number == NULL}
+                        <input type="number" id="input_phone_number" name="phone_number">
+                        {else}
+                        <input type="number" id="input_phone_number" name="phone_number" value="{$user.phone_number}" disabled>
+                        {/if}
+                    </div>
+                </div>
+                <div id="send_verification_code" class="text-center">
+                    <button class="btn btn-lg btn-primary" type="button" id="btn_verification_code">Send Verification Code</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="{$base_url}/actions/twilio_check_code.php" method="post" id="form_twilio_check_code">
+        <div class="cb-box container" style="max-width: 450px;display: none" id="verify_check_box">
+
+            <h4>Please input the verification code</h4>
+
+            <div>
+                <div id="vcode_input_box" class="row text-center" style="margin: 15px -15px;">
+                    <div class="col-md-6">
+                        <label for="input_verification_code"><b>Verification Code: </b></label>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="number" id="input_verification_code" name="verification_code">
+                    </div>
+                </div>
+                <div id="check_verification_code" class="text-center">
+                    <button class="btn btn-lg btn-primary" type="button" id="btn_check_verification_code" onclick="check_code()">Verify</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {/if}
+
+</div>
+
+<style>
+    #withdraw_amount_box, #input_paypal_email_box {
+        margin-top: 20px;
+    }
+    #withdraw_fund {
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    #withdraw_amount_box .col-md-6, #input_paypal_email_box .col-md-6, #withdraw_fund {
+        text-align: center;
+    }
+    #main .alert-success {
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 35px;
+        text-align: center;
+        padding-top: 0px;
+        border-radius: 10px;
+    }
+    #withdraw_amount_box label, #input_paypal_email_box label {
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    #current_balance_box {
+        font-size: 15px;
+        text-align: center;
+    }
+    #current_amount_span {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #input_paypal_email {
+        width: 100%;
+    }
+</style>
+
+<script>
+    var baseurl = '{$baseurl}';
+    $(document).ready(function () {
+        // var deposit_amount = $('#input_deposit_amount').val();
+        // $('#deposit_amount').text(deposit_amount);
+    });
+
+    function payout_withdraw() {
+        var withdraw_amount = $('#input_withdraw_amount').val();
+        var paypal_email_address = $('#input_paypal_email').val();
+
+        //validation
+        if (parseFloat(withdraw_amount) < 30) {
+            alert("You can't withdraw less than $30.");
+            return false;
+        }
+
+        $.ajax({
+            url: baseurl + '/actions/paypal_implicit_pay.php',
+            type: 'post',
+            data: {
+                withdraw_amount: withdraw_amount,
+                paypal_email_address: paypal_email_address,
+                user_id: '{userid()}',
+                user_name: '{$user.name}',
+                user_balance: '{$user.balance}'
+            },
+            success: function (msg) {
+                var result = JSON.parse(msg);
+                console.log(result);
+                if (result.batch_header.batch_status == "PENDING") {
+                    alert('Successfully done');
+                    window.location.reload();
+                }
+            }
+        })
+    }
+
+    function withdraw_request() {
+        var withdraw_amount = $('#input_withdraw_amount').val();
+        var paypal_email_address = $('#input_paypal_email').val();
+        $.ajax({
+            url: baseurl + '/actions/withdraw_send_request.php',
+            type: 'post',
+            data: {
+                withdraw_amount: withdraw_amount,
+                paypal_email_address: paypal_email_address
+            },
+            success: function (msg) {
+                console.log('success');
+            }
+        })
+    }
+
+    $('#btn_verification_code').click(function () {
+        var phone_number = $('#input_phone_number').val();
+        $.ajax({
+            url: baseurl + '/actions/twilio_send_code.php',
+            type: 'post',
+            data: {
+                phone_number: phone_number,
+            },
+            success: function (msg) {
+                console.log(msg);
+                if (msg === 'success') {
+                    $('#verify_check_box').show();
+                    check_code();
+                }
+            }
+        })
+    });
+
+    function check_code() {
+        var verification_code = $('#input_verification_code').val();
+        var phone_number = $('#input_phone_number').val();
+        $.ajax({
+            url: baseurl + '/actions/twilio_check_code.php',
+            type: 'post',
+            data: {
+                verification_code: verification_code,
+                phone_number: phone_number,
+            },
+            success: function (msg) {
+                console.log(msg);
+                if (msg === 'success') {
+                    alert('Phone verified');
+                    $('#verify_check_box').hide();
+                    $('#verify_send_box').hide();
+                    $('#withdraw_box').show();
+                }
+                else {
+                    alert('Verification code is incorrect.');
+                }
+            }
+        })
+    }
+</script>

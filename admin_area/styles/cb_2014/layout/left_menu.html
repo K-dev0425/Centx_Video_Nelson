@@ -186,10 +186,10 @@
                             <b class="arrow icon-angle-down"></b>
                         </a>
                         {if $smarty.const.MAIN_PAGE == 'payment'}
-                        <ul class="submenu" style="display:block">
-                            {else}
+                            <ul class="submenu" style="display:block">
+                        {else}
                             <ul class="submenu">
-                                {/if}
+                        {/if}
 
                                 {if $smarty.const.SUB_PAGE == 'deposit'}
                                 <li class="active">
@@ -198,7 +198,18 @@
                                     {/if}
                                     <a href="deposit.php">
                                         <i class="glyphicon glyphicon-hand-right"></i>
-                                        {lang code="deposit"}
+                                        {lang code="deposit_setting"}
+                                    </a>
+                                </li>
+
+                                {if $smarty.const.SUB_PAGE == 'withdraw'}
+                                <li class="active">
+                                    {else}
+                                <li>
+                                    {/if}
+                                    <a href="withdraw.php">
+                                        <i class="glyphicon glyphicon-hand-right"></i>
+                                        {lang code="withdrawal_setting"}
                                     </a>
                                 </li>
 
@@ -213,27 +224,16 @@
                                     </a>
                                 </li>
 
-                                <!--{if $smarty.const.SUB_PAGE == 'ad_payment'}-->
-                                <!--<li class="active">-->
-                                    <!--{else}-->
-                                <!--<li>-->
-                                    <!--{/if}-->
-                                    <!--<a href="ad_payment.php">-->
-                                        <!--<i class="glyphicon glyphicon-hand-right"></i>-->
-                                        <!--Ad Payment-->
-                                    <!--</a>-->
-                                <!--</li>-->
-
-                                <!--{if $smarty.const.SUB_PAGE == 'deposit_fund'}-->
-                                <!--<li class="active">-->
-                                    <!--{else}-->
-                                <!--<li>-->
-                                    <!--{/if}-->
-                                    <!--<a href="deposit_fund.php">-->
-                                        <!--<i class="glyphicon glyphicon-hand-right"></i>-->
-                                        <!--Deposit History-->
-                                    <!--</a>-->
-                                <!--</li>-->
+                                {if $smarty.const.SUB_PAGE == 'manage_withdrawal'}
+                                <li class="active">
+                                    {else}
+                                <li>
+                                {/if}
+                                    <a href="manage_withdrawal.php">
+                                        <i class="glyphicon glyphicon-hand-right"></i>
+                                        {lang code="manage_withdrawal"}
+                                    </a>
+                                </li>
 
                             </ul>
                             </li>

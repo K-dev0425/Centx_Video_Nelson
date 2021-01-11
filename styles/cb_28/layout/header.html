@@ -195,11 +195,12 @@
 									</a>
 									<ul class="dropdown-menu">
 										{if has_access('admin_access')}
-										<li class="hidden-xs"><a href="{$admin_baseurl}">{lang code="admin_area"}</a></li>
+										<li><a href="{$admin_baseurl}">{lang code="admin_area"}</a></li>
 										{/if}
-										<li class="hidden-xs"><a href="{link name='my_account' }{userid}">{lang code="my_account"}</a></li>
-										<li class="hidden-xs"><a href="{link name='deposit_fund'}deposit_fund.php">Deposit Funds</a></li>
-										<li class="hidden-xs"><a href="{link name='my_videos'}">{lang code="manage_videos"}</a></li>
+										<li><a href="{link name='my_account' }{userid}">{lang code="my_account"}</a></li>
+										<li><a href="{link name='deposit_fund'}deposit_fund.php">{lang code="deposit_funds"}</a></li>
+										<li><a href="{link name='withdraw_fund'}withdraw_fund.php">{lang code="withdraw_funds"}</a></li>
+										<li><a href="{link name='my_videos'}">{lang code="manage_videos"}</a></li>
 										{ANCHOR place="head_audio_dropdown"}
 										<li><a href="{link name='channels'}">{lang code="view_channels"}</a></li>
 										<!-- changes made-->

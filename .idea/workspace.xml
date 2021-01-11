@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c024d96c-da7d-4fb3-ae57-1480fbd6562e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin_area/deposit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_area/paypal_transfer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/deposit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paypal_cancel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paypal_success.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/cb_28/layout/paypal_cancel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/cb_28/layout/paypal_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/paypal_implicit_pay.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/twilio_check_code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/twilio_send_code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actions/withdraw_send_request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin_area/manage_withdrawal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_withdrawal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/withdraw.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin_area/withdraw.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/cb_28/layout/withdraw_fund.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/ad_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/ad_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/deposit_fund.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/deposit_fund.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/email_tester.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/email_tester.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/manage_price.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/manage_price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/dbconnect.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_price.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_price.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_area/video_payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/video_payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deposit_fund.php" beforeDir="false" afterPath="$PROJECT_DIR$/deposit_fund.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/langs/en.lang" beforeDir="false" afterPath="$PROJECT_DIR$/includes/langs/en.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html" beforeDir="false" afterPath="$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paypal_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/paypal_success.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/cb_28/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/styles/cb_28/layout/header.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,38 +30,40 @@
     <session id="-1769476328">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.0" value="9" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="17" />
-          <entry key="PHP" value="51" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="HTML" value="39" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PHP" value="113" />
+          <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1974" />
-          <entry key="PHP" value="2651" />
-          <entry key="PLAIN_TEXT" value="397" />
+          <entry key="HTML" value="5039" />
+          <entry key="PHP" value="6798" />
+          <entry key="PLAIN_TEXT" value="660" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/paypal_success.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="104">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -74,10 +72,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/paypal_cancel.html">
+        <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/withdraw_fund.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#form#1;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#form#2;n#div#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="203" column="76" lean-forward="true" selection-start-line="203" selection-start-column="76" selection-end-line="203" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/twilio_send_code.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/withdraw_fund.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="104">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="233" column="69" selection-start-line="233" selection-start-column="69" selection-end-line="233" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/video_manager.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3146">
+              <caret line="175" column="37" lean-forward="true" selection-start-line="175" selection-start-column="37" selection-end-line="175" selection-end-column="37" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#form#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#form#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/video_manager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="179" column="35" lean-forward="true" selection-start-line="179" selection-start-column="35" selection-end-line="179" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -85,62 +150,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deposit_fund.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="286">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paypal_cancel.php">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_implicit_pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_area/paypal_transfer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="53" column="82" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="419" column="27" lean-forward="true" selection-start-line="419" selection-start-column="27" selection-end-line="419" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_success.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="50" column="54" lean-forward="true" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actions/update_deposit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="74">
+              <caret line="109" column="59" lean-forward="true" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -156,41 +176,42 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>send_email(</find>
-      <find>The following From address</find>
-      <find>unable to send email</find>
-      <find>Mailer Error:</find>
-      <find>The following F</find>
-      <find>from_failed</find>
-      <find>The following from</find>
-      <find>connect_host</find>
-      <find>The following from addre</find>
-      <find>- Any -</find>
-      <find>valid sender email</find>
-      <find>could not authenticate</find>
-      <find>authenticate</find>
-      <find>email template</find>
-      <find>cbmail(</find>
-      <find>website_email</find>
-      <find>&quot;SELECT</find>
-      <find>&quot;deposit</find>
-      <find>trigger</find>
-      <find>.trigger('click'</find>
-      <find>define(</find>
-      <find>db_select(</find>
-      <find>INSERT INTO</find>
-      <find>user_name</find>
-      <find>subtitle('</find>
-      <find>deposit_amount</find>
-      <find>PAYPAL</find>
-      <find>$db-&gt;Execute(</find>
-      <find>date_</find>
       <find>watch-color</find>
+      <find>dropdown myaccount-dd</find>
+      <find>deposit_fund</find>
+      <find>withdraw</find>
+      <find>.unload(</find>
+      <find>serialize(</find>
+      <find>&quot;UPDATE</find>
+      <find>paypal_url</find>
+      <find>require</find>
+      <find>require '</find>
+      <find>basedir</find>
+      <find>return json_encode</find>
+      <find>phone_verify_box</find>
+      <find>{if</find>
+      <find>$user-&gt;</find>
+      <find>{else}</find>
+      <find>INSERT INTO &quot;.tbl('</find>
+      <find>INSERT</find>
+      <find>UPDATE &quot;.tbl(&quot;users</find>
+      <find>_cb.flag</find>
+      <find>'flag</find>
+      <find>SELECT *</find>
+      <find>INSERT INTO</find>
+      <find>deposit</find>
+      <find>deposit&quot;</find>
+      <find>manage_withdrawal</find>
+      <find>tbl(&quot;paypal</find>
+      <find>echo &quot;&lt;script</find>
+      <find>alert(</find>
+      <find>&quot;dropdown-menu&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>transaction_history</replace>
       <replace>deposit_</replace>
       <replace>start_time</replace>
+      <replace>withdraw</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -208,25 +229,41 @@
         <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_price.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/deposit.php" />
         <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/deposit.html" />
-        <option value="$PROJECT_DIR$/styles/cb_28/layout/header.html" />
         <option value="$PROJECT_DIR$/includes/classes/phpmailer/class.phpmailer.php" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/functions.php" />
         <option value="$PROJECT_DIR$/admin_area/email_tester.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/update_deposit.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-3/update_deposit.php" />
-        <option value="$PROJECT_DIR$/includes/langs/en.lang" />
-        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html" />
-        <option value="$PROJECT_DIR$/deposit_fund.php" />
-        <option value="$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html" />
-        <option value="$PROJECT_DIR$/includes/common.php" />
-        <option value="$PROJECT_DIR$/paypal_success.php" />
         <option value="$PROJECT_DIR$/admin_area/paypal_transfer.php" />
-        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html" />
         <option value="$PROJECT_DIR$/paypal_cancel.php" />
         <option value="$PROJECT_DIR$/styles/cb_28/layout/paypal_cancel.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_success.php" />
         <option value="$PROJECT_DIR$/styles/cb_28/layout/paypal_success.html" />
+        <option value="$PROJECT_DIR$/admin_area/withdraw.php" />
+        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/withdraw.html" />
+        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/twilio_check_code.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/twilio_send_code.php" />
+        <option value="$PROJECT_DIR$/withdraw_fund.php" />
+        <option value="$PROJECT_DIR$/actions/twilio_check_code.php" />
+        <option value="$PROJECT_DIR$/actions/twilio_send_code.php" />
+        <option value="$PROJECT_DIR$/actions/paypal_implicit_pay.php" />
+        <option value="$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html" />
+        <option value="$PROJECT_DIR$/admin_area/manage_withdrawal.php" />
+        <option value="$PROJECT_DIR$/includes/langs/en.lang" />
+        <option value="$PROJECT_DIR$/actions/withdraw_send_request.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/manage_withdrawal.php" />
+        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_withdrawal.html" />
+        <option value="$PROJECT_DIR$/includes/common.php" />
+        <option value="$PROJECT_DIR$/deposit_fund.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/withdraw_fund.php" />
+        <option value="$PROJECT_DIR$/paypal_success.php" />
+        <option value="$PROJECT_DIR$/styles/cb_28/layout/withdraw_fund.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_implicit_pay.php" />
+        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/video_manager.html" />
+        <option value="$PROJECT_DIR$/styles/cb_28/layout/header.html" />
+        <option value="$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html" />
       </list>
     </option>
   </component>
@@ -241,11 +278,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-1" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="218" />
+    <option name="y" value="-15" />
+    <option name="width" value="1482" />
+    <option name="height" value="996" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,6 +298,11 @@
               <item name="centx" type="b2602c69:ProjectViewProjectNode" />
               <item name="centx" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="centx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="centx" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_area" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -270,7 +312,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../opn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Drupal_fix" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -303,17 +345,26 @@
       <workItem from="1607803127775" duration="1468000" />
       <workItem from="1608011270560" duration="599000" />
       <workItem from="1608012793102" duration="19679000" />
+      <workItem from="1608095442223" duration="1215000" />
+      <workItem from="1608604196665" duration="2447000" />
+      <workItem from="1608790447130" duration="4098000" />
+      <workItem from="1608841807623" duration="903000" />
+      <workItem from="1608884041625" duration="155000" />
+      <workItem from="1608932089012" duration="1299000" />
+      <workItem from="1609580660887" duration="60569000" />
+      <workItem from="1610125197104" duration="10519000" />
+      <workItem from="1610282924063" duration="25609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63494000" />
+    <option name="totallyTimeSpent" value="170308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21108742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -326,7 +377,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.17070484" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.27422908" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -341,198 +392,390 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin_area/video_payment.php" />
-    <entry file="file://$PROJECT_DIR$/admin_area/ad_payment.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/dbconnect.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_price.html" />
-    <entry file="file://$PROJECT_DIR$/admin_area/manage_banner.php" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_banner.html" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/theme/css/styles.css" />
-    <entry file="file://$PROJECT_DIR$/admin_area/manage_price.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_7.php">
+    <entry file="file://$PROJECT_DIR$/paypal_cancel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="1025" column="9" selection-start-line="1025" selection-start-column="9" selection-end-line="1025" selection-end-column="9" />
+        <state relative-caret-position="208">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions_helper.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/deposit.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/deposit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="290" column="26" selection-start-line="290" selection-start-column="26" selection-end-line="290" selection-end-column="26" />
+        <state relative-caret-position="182">
+          <caret line="7" selection-end-line="53" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/classes/phpmailer/class.smtp.php" />
-    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/header.html" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/functions.php" />
-    <entry file="file://$PROJECT_DIR$/includes/classes/phpmailer/class.phpmailer.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/update_deposit.php" />
-    <entry file="file://$PROJECT_DIR$/includes/classes/my_queries.class.php" />
-    <entry file="file://$PROJECT_DIR$/includes/functions_user.php" />
-    <entry file="file://$PROJECT_DIR$/includes/conversion.conf.php" />
-    <entry file="file://$PROJECT_DIR$/admin_area/email_tester.php" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/email_settings.html" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/deposit.html" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/deposit_fund.html" />
-    <entry file="file://$PROJECT_DIR$/admin_area/deposit.php" />
-    <entry file="file://$PROJECT_DIR$/includes/langs/en.lang" />
-    <entry file="file://$PROJECT_DIR$/includes/functions.php" />
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-3/update_deposit.php">
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/withdraw.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/classes/db.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1534">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="164" column="31" lean-forward="true" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/admin.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/watch_video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="172" selection-start-line="172" selection-end-line="172" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/pay_video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actions/video_survey.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/deposit_fund.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="27" />
+        <state relative-caret-position="1040">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_success.php">
+    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/watch_video.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="39" column="48" lean-forward="true" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="173">
+          <caret line="489" column="73" selection-start-line="489" selection-start-column="72" selection-end-line="489" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#30#36#0" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/paypal_transfer.php">
+    <entry file="file://$PROJECT_DIR$/admin_area/withdraw.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        <state relative-caret-position="52">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html">
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/Rest/Verify/V2/ServiceContext.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="53" column="82" selection-start-line="53" selection-start-column="82" selection-end-line="53" selection-end-column="82" />
+        <state relative-caret-position="572">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#151#189#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paypal_cancel.php">
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/Rest/Verify/V2/Service/VerificationList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        <state relative-caret-position="197">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/common.php">
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/Rest/Verify/V2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="419" column="27" lean-forward="true" selection-start-line="419" selection-start-column="27" selection-end-line="419" selection-end-column="27" />
+        <state relative-caret-position="312">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deposit_fund.php">
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/Rest/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="-648">
+          <caret line="61" column="65" lean-forward="true" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/blocks/videos/video.html">
+    <entry file="file://$PROJECT_DIR$/includes/libraries/twilio/twilio-php-main/src/Twilio/Rest/Api/V2010/Account/MessageList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="62" column="93" selection-start-line="62" selection-start-column="80" selection-end-line="62" selection-end-column="93" />
+          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/paypal_cancel.html">
+    <entry file="file://$PROJECT_DIR$/styles/vod/layout/blocks/videos/video.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="3252">
+          <caret line="177" column="51" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/flagged_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2382" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/clipbucket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2026" column="8" selection-start-line="2026" selection-start-column="8" selection-end-line="2026" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/classes/user.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="1513" column="8" selection-start-line="1513" selection-start-column="8" selection-end-line="1513" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/blocks/common/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/withdraw_fund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/flagged_videos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="146" column="16" lean-forward="true" selection-start-line="146" selection-start-column="16" selection-end-line="147" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/twilio_check_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actions/update_deposit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="364">
           <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_6.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="596" column="72" lean-forward="true" selection-start-line="596" selection-start-column="39" selection-end-line="596" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/twilio_check_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/paypal_implicit_pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/twilio_send_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="79" lean-forward="true" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/manage_withdrawal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/deposit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/paypal_transfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="19" column="64" lean-forward="true" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/paypal_transfer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/deposit_fund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="2" lean-forward="true" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/langs/en.lang">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="478" selection-start-line="1" selection-start-column="478" selection-end-line="1" selection-end-column="478" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/curl/curl_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/manage_withdrawal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="51" column="67" lean-forward="true" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+          <folding>
+            <element signature="n#div#0;n#form#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/manage_withdrawal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="407" column="37" lean-forward="true" selection-start-line="407" selection-start-column="37" selection-end-line="407" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/withdraw_send_request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/deposit_fund.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#!!top" />
+            <element signature="e#3124#3169#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="50" column="54" lean-forward="true" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+        <state relative-caret-position="178">
+          <caret line="30" column="55" lean-forward="true" selection-end-line="58" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paypal_success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" selection-start-line="8" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/vote_channel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="1011" column="13" selection-start-line="1011" selection-start-column="13" selection-end-line="1011" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/withdraw_fund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deposit_fund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/twilio_send_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/paypal_implicit_pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="109" column="59" lean-forward="true" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/paypal_success.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="104">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/video_manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="179" column="35" lean-forward="true" selection-start-line="179" selection-start-column="35" selection-end-line="179" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/withdraw_fund.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="175" column="45" selection-start-line="175" selection-start-column="45" selection-end-line="175" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#1;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#2;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/video_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3146">
+          <caret line="175" column="37" lean-forward="true" selection-start-line="175" selection-start-column="37" selection-end-line="175" selection-end-column="37" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#form#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#2;n#tr#1;n#table#0;n#form#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/cb_28/layout/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="203" column="76" lean-forward="true" selection-start-line="203" selection-start-column="76" selection-end-line="203" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_area/styles/cb_2014/layout/left_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="233" column="69" selection-start-line="233" selection-start-column="69" selection-end-line="233" selection-end-column="69" />
         </state>
       </provider>
     </entry>

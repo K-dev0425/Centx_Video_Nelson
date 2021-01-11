@@ -1,0 +1,54 @@
+<!--<link href="../theme/stylesheet.css" rel="stylesheet" type="text/css">-->
+{$withdraw_max_price = $Cbucket->configs['withdraw_max_price']}
+{$withdraw_min_price = $Cbucket->configs['withdraw_min_price']}
+{$withdraw_text = $Cbucket->configs['withdraw_text']}
+<div class="heading">
+    <h2>Manage withdraw</h2>
+</div>
+
+<!--<a class="btn btn-primary btn-sm pull-right" href="?mode=add">Add New Level <b>+</b></a>-->
+<br>
+
+<form action="#" id="form_withdraw" method="post">
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="withdraw_min_price"><b>{lang code="withdraw_min_limit"}($USD):</b></label> <br>
+            <input type="number" name="withdraw_min_price" id="withdraw_min_price" value="{(int)$withdraw_min_price}">
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="withdraw_max_price"><b>{lang code="withdraw_max_limit"}($USD):</b></label> <br>
+            <input type="number" name="withdraw_max_price" id="withdraw_max_price" value="{(int)$withdraw_max_price}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 col-md-6">
+            <label for="withdraw_text"><strong>{lang code="withdraw_text"}</strong></label> <br>
+            <textarea name="withdraw_text" id="withdraw_text" rows="5" style="width: 100%">{$withdraw_text}</textarea>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-success" type="button" id="btn_submit">Update Settings</button>
+</form>
+
+<script>
+    var baseurl = '{$baseurl}';
+
+    $(document).ready(function () {
+        $('#btn_submit').click(function () {
+            var form_data = $('#form_withdraw').serialize();
+
+            $.ajax({
+                url: baseurl + '/admin_area/withdraw.php',
+                type: 'post',
+                data: form_data,
+                success: function (msg) {
+                    if (msg) {
+                        alert('Successfully updated.');
+                        window.location.reload();
+                    }
+                }
+            })
+        })
+    });
+
+</script>

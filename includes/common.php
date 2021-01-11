@@ -400,13 +400,28 @@
 	define("USER_ACTIVITY_FEEDS_LIMIT",15);
 
 	# RK Paypal Payment Terms
-	define('PAYPAL_ID', 'sb-awull4048758@business.example.com');
+	define('PAYPAL_ID', 'sb-z3m8x4045148@business.example.com');
 	define('PAYPAL_SANDBOX', true);
 	define('PAYPAL_RETURN_URL', BASEURL.'/paypal_success.php');
 	define('PAYPAL_CANCEL_URL', BASEURL.'/paypal_cancel.php');
 	define('PAYPAL_NOTIFY_URL', BASEURL.'/paypal_ipn.php');
 	define('PAYPAL_CURRENCY', 'USD');
 	define('PAYPAL_URL', (PAYPAL_SANDBOX == true) ? "https://www.sandbox.paypal.com/cgi-bin/webscr" : "https://www.paypal.com/cgi-bin/webscr");
+	define('PAYPAL_API_USERNAME', 'centx.app_api1.gmail.com');
+	define('PAYPAL_API_PASSWORD', 'TMEGE32VFB4TMBBC');
+	define('PAYPAL_API_SIGNATURE', 'AGYVyZWqa4Oe.-gbVfF54kS0WjsiArBHYjDPKOrcgntgz3aQsY8UnIJ4');
+	define('PAYPAL_API_APP_ID', 'APP-80W284485P519543T');
+	define('PAYPAL_CLIENT_ID', 'AcZp17yop3eDo475znLMpDlSF6u91kyaaj9HJC4qw_FAQeT4WF1zpTPdftwioKZF2qfxraKTgTCUthi8');
+	define('PAYPAL_CLIENT_SECRET', 'EPLip_pIkWim34lgRPShFx63SE33qvylKdCnqVzovY4hyRpw0QCyoUlz0mNy5l76NApn5lVFAYlMBlX5');
+	define('PAYPAL_ADAPTIVE_SERVICE_URL', (PAYPAL_SANDBOX == true) ? "https://svcs.sandbox.paypal.com/AdaptivePayments/" : "https://svcs.paypal.com/AdaptivePayments/");
+	define("PAYPAL_TOKEN_URL", "https://api.sandbox.paypal.com/v1/oauth2/token");
+	define("PYPAL_PAYOUTS_URL", "https://api.sandbox.paypal.com/v1/payments/payouts");
+
+	# RK Twilio Credentials
+	define('TWILIO_SID', 'AC12f1526756a3645f90a919caab5698b5');
+	define('TWILIO_TOKEN', 'ce1af9731763924f81c45a64c8a4c1eb');
+	define('TWILIO_PHONE_NUMBER', '+12313594664');
+	define('TWILIO_SERVICE_SID', 'VA61dd1db7184062a12b4f4fb92004626a');
 
 	# SETTING PHOTO SETTING
 	$cbphoto->thumb_width = $row['photo_thumb_width'];
